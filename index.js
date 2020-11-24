@@ -17,7 +17,7 @@ function displayResults(responseJson) {
   let index = $('#dog-quantity').val();
   let dogHtml = "";
   for (let i=0; i < index; i++) {
-    dogHtml+=`<br><img src="${responseJson.message[i]}" class="results-img">`;
+    dogHtml+=`<img src="${responseJson.message[i]}" class="results-img"><br>`;
   }
   $('section h2').replaceWith(`<h2>You got ${getQuantity()} dogs!</h2>`);
   $('div.response-images').html(dogHtml);
